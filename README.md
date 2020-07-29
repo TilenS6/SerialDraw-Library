@@ -8,7 +8,7 @@ Serial draw allows Arduino to communicate with SerialDraw Client (https://github
 Library can be downloaded and installed from Arduino Library manager.
 
 To use library in you project please add this to the start of the file
-```c
+```cpp
 #include <ArduinoSerialDraw.h>
 ```
 
