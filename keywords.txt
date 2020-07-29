@@ -1,0 +1,7 @@
+ASD	KEYWORD1
+initialise	KEYWORD2
+background	KEYWORD2
+square	KEYWORD2
+pixel	KEYWORD2
+fillArea	KEYWORD2
+clearPixel	KEYWORD2
