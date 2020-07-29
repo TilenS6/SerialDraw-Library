@@ -1,4 +1,4 @@
-# SerialDraw-Library
+# SerialDraw
 An Arduino Library for Serial Draw Software.
 
 # About SerialDraw
