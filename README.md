@@ -11,6 +11,7 @@ To use library in you project please add this to the start of the file
 ```cpp
 #include <SerialDraw.h>
 ```
+**FOR USAGE PLEASE VISIT [SerialDraw Wiki](https://github.com/TilenS6/SerialDraw-Library/wiki)
 
 # Why to choose SerialDraw
 SerialDraw is a free software alternative to hardware displays. It allows you to create images and games on a 60x60 grid.
