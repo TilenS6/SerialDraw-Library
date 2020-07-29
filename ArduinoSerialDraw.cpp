@@ -1,6 +1,9 @@
 #include "Arduino.h"
 #include "ArduinoSerialDraw.h"
 
+//By TilenS and JurijTSL
+//Download from github: https://github.com/TilenS6/ArduinoSerialDraw-Library
+
 String ASD::stringToColor(String in) {
   in.toLowerCase();
   if (in == "black") {
@@ -34,48 +37,31 @@ String ASD::stringToColor(String in) {
   }
 }
 
-/*
- * Serial.println("x y color"); 60*60 https://pointsprizes-blog.s3-accelerate.amazonaws.com/4497.jpg
- * Serial.println("b color"); b - background
- * Serial.println("s x y width height color"); s - sqwere
- */
-
 ASD::ASD(int baud) {
-  //Serial.begin(baud); //1000000;
 }
 
 void ASD::initialise() {
-  Serial.println("poopoo");
-  delay(10);
-  Serial.println("poopoo");
-  delay(10);
-  Serial.println("poopoo");
-  delay(10);
-  Serial.println("poopoo");
-  delay(10);
-  Serial.println("poopoo");
-  delay(10);
-  Serial.println("poopoo");
-  delay(10);
-  Serial.println("poopoo");
-  delay(10);
+  for (int i = 0; i < 8; i++) {
+    Serial.println("flush");
+    delay(10);
+  }
   Serial.println("trigger");
   delay(10);
 }
 
-boolean dobu = false;
+boolean gotIt = false;
 char in[1];
 long mil = 0;
 
 void waitForResponse() {
-  dobu = false;
+  gotIt = false;
   mil = millis();
   while (Serial.available() == 0 && (millis() - mil) < 100) {};
   mil = millis();
-  while (Serial.available()>0 && !dobu) {
+  while (Serial.available()>0 && !gotIt) {
     Serial.readBytes(in, Serial.available());
     if (in[0] == 'k' || (millis() - mil) > 100) {
-	  dobu = true;
+	  gotIt = true;
     }
   }
 }
@@ -100,5 +86,10 @@ void ASD::fillArea(int startX, int startY, int endX, int endY, String color) {
 
 void ASD::clearPixel(int x, int y) {
   Serial.println("c," + String(x) + "," + String(y));
+  waitForResponse();
+}
+
+void ASD::clearPage() {
+  Serial.println("l");
   waitForResponse();
 }
