@@ -2,6 +2,7 @@
 #ifndef ArduinoSerialDraw_h
 #define ArduinoSerialDraw_h
 
+//By TilenS and JurijTSL
 class ASD {
   public:
     ASD(int baud);
