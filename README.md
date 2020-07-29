@@ -9,7 +9,7 @@ Library can be downloaded and installed from Arduino Library manager.
 
 To use library in you project please add this to the start of the file
 ```cpp
-#include <ArduinoSerialDraw.h>
+#include <SerialDraw.h>
 ```
 
 # Why to choose SerialDraw
