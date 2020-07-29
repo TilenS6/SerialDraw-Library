@@ -2,7 +2,6 @@
 #ifndef ArduinoSerialDraw_h
 #define ArduinoSerialDraw_h
 
-//by me
 class ASD {
   public:
     ASD(int baud);
