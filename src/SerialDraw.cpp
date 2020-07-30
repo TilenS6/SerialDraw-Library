@@ -21,13 +21,14 @@ String ASD::stringToColor(String in) {
 ASD::ASD(int baud) {
 }
 
-void ASD::initialise() {
+void ASD::initialise(int width, int height) {
   for (int i = 0; i < 8; i++) {
     Serial.println("flush");
     delay(10);
   }
   Serial.println("trigger");
-  delay(10);
+  delay(20);
+  Serial.println("r," + String(width) + "," + String(height));
 }
 
 boolean gotIt = false;
@@ -70,7 +71,6 @@ void ASD::clearPage() {
   waitForResponse();
 }
 
-void ASD::setTitle(int width, int height) {
-  Serial.println("t," + String(width) + "," + String(height));
-  waitForResponse();
+void ASD::setTitle(String in) {
+  Serial.println("t," + in);
 }
