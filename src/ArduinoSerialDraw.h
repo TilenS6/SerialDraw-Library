@@ -1,6 +1,5 @@
 #include "Arduino.h"
-#ifndef SerialDraw_h
-#define SerialDraw_h
+#define ArduinoSerialDraw_h
 
 //By TilenS and JurijTSL
 //Download from github: https://github.com/TilenS6/ArduinoSerialDraw-Library
@@ -15,9 +14,8 @@ class ASD {
     void clearPage();
     void fillPage(String color);
     void clearPixel(int x, int y);
-	void setTitle(String title);
   private:
     String stringToColor(String in);
 };
 
-#endif
+//#endif

@@ -1,4 +1,4 @@
-#include <SerialDraw.h>
+#include <ArduinoSerialDraw.h>
 /* COLORS:
  *   Black
  *   DarkGray
@@ -139,9 +139,9 @@ int angStic() { //---------------- HERE you can configure your user iput device.
     return 0;
   } else if (analogRead(A0) > 1013 && orient != 0) {
     return 1;
-  } else if (analogRead(A1) < 10 && orient != 3) {
+  } else if (analogRead(A1) < 10 && orient != 2) {
     return 3;
-  } else if (analogRead(A1) > 1013 && orient != 2) {
+  } else if (analogRead(A1) > 1013 && orient != 3) {
     return 2;
   } else {
     return 4;
