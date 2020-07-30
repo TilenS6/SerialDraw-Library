@@ -14,8 +14,7 @@ class ASD {
     void clearPage();
     void fillPage(String color);
     void clearPixel(int x, int y);
+    void setTitle(int width, int height);
   private:
     String stringToColor(String in);
 };
-
-//#endif

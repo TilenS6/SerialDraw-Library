@@ -69,3 +69,8 @@ void ASD::clearPage() {
   Serial.println("l");
   waitForResponse();
 }
+
+void ASD::setTitle(int width, int height) {
+  Serial.println("t," + String(width) + "," + String(height));
+  waitForResponse();
+}
