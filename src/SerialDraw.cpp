@@ -75,3 +75,8 @@ void ASD::clearPage() {
   Serial.println("l");
   waitForResponse();
 }
+
+void ASD::setScore(int score) {
+  Serial.println("s," + String(score));
+  waitForResponse();
+}

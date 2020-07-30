@@ -1,35 +1,4 @@
 #include <SerialDraw.h>
-/* COLORS:
- *   Black
- *   DarkGray
- *   Gray
- *   White
- *   
- *   Red
- *   Magenta
- *   Pink
- *   
- *   Orange
- *   Yellow
- *   
- *   Green
- *   LightGreen
- *   DarkGreen
- *   
- *   Blue
- *   Cyan
- *   
- * 
- * CODE:
- *   ASD ASD(0);
- *   ASD.initialise();
- *   ASD.background(color);
- *   ASD.pixel(x, y, color);
- *   ASD.fillArea(startX, startY, endX, endY, color);
- *   ASD.clearPage();
- *   ASD.fillPage(color);
- *   ASD.clearPixel(x, y);
- */
 
 ASD ASD(0);
 
