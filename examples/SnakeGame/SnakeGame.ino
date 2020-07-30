@@ -140,6 +140,7 @@ void foodCheck() { //checks if head is on the food
 }
 
 void nextInterval(int ori) { //calculates new snake position
+  ASD.setScore(len - 3);
   orientTmp = angStic();
   if (orientTmp != 4) {
     orient = orientTmp;
