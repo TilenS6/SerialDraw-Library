@@ -5,3 +5,4 @@ square	KEYWORD2
 pixel	KEYWORD2
 fillArea	KEYWORD2
 clearPixel	KEYWORD2
+setTitle  KEYWORD2

@@ -80,7 +80,7 @@ void ASD::background(String color) {
 
 void ASD::fillArea(int startX, int startY, int endX, int endY, String color) {
   String _color = stringToColor(color);
-  Serial.println("a," + String(startX) + "," +  String(startY) + "," +  String(endX) + "," +  String(endY) + "," +  String(_color));
+  Serial.println("a," + String(startX) + "," +  String(startY) + "," +  String(endX) + "," +  String(endY) + "," +  _color);
   waitForResponse();
 }
 
@@ -91,5 +91,10 @@ void ASD::clearPixel(int x, int y) {
 
 void ASD::clearPage() {
   Serial.println("l");
+  waitForResponse();
+}
+
+void ASD::setTitle(String title) {
+  Serial.println("t," + title);
   waitForResponse();
 }
