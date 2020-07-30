@@ -1,5 +1,5 @@
 #include "Arduino.h"
-#include "ArduinoSerialDraw.h"
+#include "SerialDraw.h"
 
 //By TilenS and JurijTSL
 //Download from github: https://github.com/TilenS6/ArduinoSerialDraw-Library
