@@ -18,19 +18,6 @@ String ASD::stringToColor(String in) {
   return String(0);   // default return value;  fixes bug if you put this line at end of the existing function
 }
 
-ASD::ASD(int baud) {
-}
-
-void ASD::initialise(int width, int height) {
-  for (int i = 0; i < 8; i++) {
-    Serial.println("flush");
-    delay(10);
-  }
-  Serial.println("trigger");
-  delay(20);
-  Serial.println("r," + String(width) + "," + String(height));
-}
-
 boolean gotIt = false;
 char in[1];
 const unsigned long timeout = 100;
@@ -44,6 +31,24 @@ void waitForResponse() {
        if (in[0] == 'k') break;
     }
   }
+}
+
+ASD::ASD(int baud) {
+}
+
+void ASD::initialise(int width, int height, String tit) {
+  for (int i = 0; i < 8; i++) {
+    Serial.println("flush");
+    delay(10);
+  }
+  Serial.println("trigger");
+  delay(20);
+  Serial.println("r," + String(width) + "," + String(height));
+  waitForResponse();
+  delay(10);
+  Serial.println("t," + tit);
+  waitForResponse();
+  delay(10);
 }
 
 void ASD::pixel(int x, int y, String color) {
@@ -69,8 +74,4 @@ void ASD::clearPixel(int x, int y) {
 void ASD::clearPage() {
   Serial.println("l");
   waitForResponse();
-}
-
-void ASD::setTitle(String in) {
-  Serial.println("t," + in);
 }

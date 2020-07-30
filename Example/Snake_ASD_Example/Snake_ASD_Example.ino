@@ -99,7 +99,7 @@ void setup() {
   Serial.begin(1000000); //open serial for library to communicate to computer
   pinMode(A0, INPUT); //joystick port for left- right+
   pinMode(A1, INPUT); //joystick port for up- down+
-  ASD.initialise(60, 60); //configure communication and starts the software
+  ASD.initialise(60, 60, "Demo Snake Game"); //configure communication and starts the software
   ASD.background("black"); //set background to black
   ASD.pixel(foodX, foodY, "red"); //draw food on the screen
 }
