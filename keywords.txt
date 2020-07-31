@@ -6,3 +6,4 @@ pixel	KEYWORD2
 fillArea	KEYWORD2
 clearPixel	KEYWORD2
 setScore	KEYWORD2
+clearPage	KEYWORD2
