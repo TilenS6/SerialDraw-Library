@@ -1,9 +1,9 @@
 ASD	KEYWORD1
 initialise	KEYWORD2
-background	KEYWORD2
-square	KEYWORD2
 pixel	KEYWORD2
+background	KEYWORD2
 fillArea	KEYWORD2
+clearPage	KEYWORD2
+square	KEYWORD2
 clearPixel	KEYWORD2
 setScore	KEYWORD2
-clearPage	KEYWORD2

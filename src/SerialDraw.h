@@ -12,7 +12,6 @@ class ASD {
     void background(String color);
     void fillArea(int x, int y, int w, int h, String color);
     void clearPage();
-    void fillPage(String color);
     void clearPixel(int x, int y);
     void setScore(int score);
   private:
